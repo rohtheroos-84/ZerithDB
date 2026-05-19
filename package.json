@@ -21,6 +21,9 @@
     "clean": "turbo run clean && rimraf node_modules",
     "changeset": "changeset",
     "version-packages": "changeset version",
+    "check:changeset": "node scripts/check-changeset.js",
+    "generate:api-baselines": "node scripts/generate-api-baselines.js",
+    "check:api": "node scripts/check-api-diff.js",
     "release": "turbo run build --filter=!./apps/* && changeset publish",
     "prepare": "husky"
   },
